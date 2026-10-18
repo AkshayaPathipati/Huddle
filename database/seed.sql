@@ -274,3 +274,27 @@ VALUES
 (122409, 'Sports Analytics Society',
  'Uses data analysis to explore sports performance and strategy.',
  2023, 'sportsdata.sdsu@example.com', 'Active', NULL);
+
+
+-- Melanie: Sample campus locations
+-- Fictional meeting locations for testing
+
+INSERT INTO Location (university_id, building, room)
+VALUES
+-- UC Berkeley
+(110635, 'Engineering Building', '101'),
+(110635, 'Science Hall', '205'),
+(110635, 'Student Center', '310'),
+(110635, 'Library', '120'),
+
+-- Fresno State
+(110556, 'Engineering Building', '102'),
+(110556, 'Science Hall', '210'),
+(110556, 'Student Center', '305'),
+(110556, 'Library', '115'),
+
+-- San Diego State University
+(122409, 'GMCS', '309'),
+(122409, 'Student Union', '201'),
+(122409, 'Engineering Building', '105'),
+(122409, 'Library', '220');
