@@ -298,3 +298,296 @@ VALUES
 (122409, 'Student Union', '201'),
 (122409, 'Engineering Building', '105'),
 (122409, 'Library', '220');
+
+
+-- Melanie: Sample meeting for SDSU Robotics Club
+
+INSERT INTO Meeting
+    (club_id, location_id, day_of_week, start_time, end_time)
+SELECT
+    c.club_id,
+    l.location_id,
+    'Monday',
+    '15:30:00',
+    '16:30:00'
+FROM Club c
+JOIN Location l
+    ON c.university_id = l.university_id
+WHERE c.name = 'Robotics and Automation Club'
+    AND c.university_id = 122409
+    AND l.building = 'GMCS'
+    AND l.room = '309';
+
+-- Melanie: Additional sample SDSU meetings
+
+-- Aztec AI Society
+INSERT INTO Meeting
+    (club_id, location_id, day_of_week, start_time, end_time)
+SELECT
+    c.club_id,
+    l.location_id,
+    'Tuesday',
+    '14:00:00',
+    '15:00:00'
+FROM Club c
+JOIN Location l
+    ON c.university_id = l.university_id
+WHERE c.name = 'Aztec AI Society'
+    AND c.university_id = 122409
+    AND l.building = 'Engineering Building'
+    AND l.room = '105';
+
+-- Data Science Club
+INSERT INTO Meeting
+    (club_id, location_id, day_of_week, start_time, end_time)
+SELECT
+    c.club_id,
+    l.location_id,
+    'Wednesday',
+    '16:00:00',
+    '17:00:00'
+FROM Club c
+JOIN Location l
+    ON c.university_id = l.university_id
+WHERE c.name = 'Data Science Club'
+    AND c.university_id = 122409
+    AND l.building = 'GMCS'
+    AND l.room = '309';
+
+-- Entrepreneurship and Startup Club
+INSERT INTO Meeting
+    (club_id, location_id, day_of_week, start_time, end_time)
+SELECT
+    c.club_id,
+    l.location_id,
+    'Thursday',
+    '17:00:00',
+    '18:00:00'
+FROM Club c
+JOIN Location l
+    ON c.university_id = l.university_id
+WHERE c.name = 'Entrepreneurship and Startup Club'
+    AND c.university_id = 122409
+    AND l.building = 'Student Union'
+    AND l.room = '201';
+
+-- Melanie: More sample SDSU meetings
+
+-- Cybersecurity Student Group
+INSERT INTO Meeting
+    (club_id, location_id, day_of_week, start_time, end_time)
+SELECT
+    c.club_id,
+    l.location_id,
+    'Monday',
+    '13:00:00',
+    '14:00:00'
+FROM Club c
+JOIN Location l
+    ON c.university_id = l.university_id
+WHERE c.name = 'Cybersecurity Student Group'
+    AND c.university_id = 122409
+    AND l.building = 'Engineering Building'
+    AND l.room = '105';
+
+-- Esports and Game Design Club
+INSERT INTO Meeting
+    (club_id, location_id, day_of_week, start_time, end_time)
+SELECT
+    c.club_id,
+    l.location_id,
+    'Friday',
+    '16:00:00',
+    '17:30:00'
+FROM Club c
+JOIN Location l
+    ON c.university_id = l.university_id
+WHERE c.name = 'Esports and Game Design Club'
+    AND c.university_id = 122409
+    AND l.building = 'Student Union'
+    AND l.room = '201';
+
+-- Marine Conservation Society
+INSERT INTO Meeting
+    (club_id, location_id, day_of_week, start_time, end_time)
+SELECT
+    c.club_id,
+    l.location_id,
+    'Tuesday',
+    '11:00:00',
+    '12:00:00'
+FROM Club c
+JOIN Location l
+    ON c.university_id = l.university_id
+WHERE c.name = 'Marine Conservation Society'
+    AND c.university_id = 122409
+    AND l.building = 'Library'
+    AND l.room = '220';
+
+-- Latin Dance and Performance Club
+INSERT INTO Meeting
+    (club_id, location_id, day_of_week, start_time, end_time)
+SELECT
+    c.club_id,
+    l.location_id,
+    'Thursday',
+    '18:30:00',
+    '20:00:00'
+FROM Club c
+JOIN Location l
+    ON c.university_id = l.university_id
+WHERE c.name = 'Latin Dance and Performance Club'
+    AND c.university_id = 122409
+    AND l.building = 'Student Union'
+    AND l.room = '201';
+
+
+-- Melanie: Sample UC Berkeley meetings
+
+-- AI and Machine Learning Society
+INSERT INTO Meeting
+    (club_id, location_id, day_of_week, start_time, end_time)
+SELECT c.club_id, l.location_id,
+       'Monday', '14:00:00', '15:00:00'
+FROM Club c
+JOIN Location l ON c.university_id = l.university_id
+WHERE c.name = 'AI and Machine Learning Society'
+    AND c.university_id = 110635
+    AND l.building = 'Engineering Building'
+    AND l.room = '101';
+
+-- Robotics and Autonomous Systems Club
+INSERT INTO Meeting
+    (club_id, location_id, day_of_week, start_time, end_time)
+SELECT c.club_id, l.location_id,
+       'Tuesday', '15:00:00', '16:00:00'
+FROM Club c
+JOIN Location l ON c.university_id = l.university_id
+WHERE c.name = 'Robotics and Autonomous Systems Club'
+    AND c.university_id = 110635
+    AND l.building = 'Engineering Building'
+    AND l.room = '101';
+
+-- Cybersecurity Club
+INSERT INTO Meeting
+    (club_id, location_id, day_of_week, start_time, end_time)
+SELECT c.club_id, l.location_id,
+       'Wednesday', '16:00:00', '17:00:00'
+FROM Club c
+JOIN Location l ON c.university_id = l.university_id
+WHERE c.name = 'Cybersecurity Club'
+    AND c.university_id = 110635
+    AND l.building = 'Science Hall'
+    AND l.room = '205';
+
+-- Data Science Community
+INSERT INTO Meeting
+    (club_id, location_id, day_of_week, start_time, end_time)
+SELECT c.club_id, l.location_id,
+       'Thursday', '13:00:00', '14:00:00'
+FROM Club c
+JOIN Location l ON c.university_id = l.university_id
+WHERE c.name = 'Data Science Community'
+    AND c.university_id = 110635
+    AND l.building = 'Library'
+    AND l.room = '120';
+
+-- Entrepreneurship Forum
+INSERT INTO Meeting
+    (club_id, location_id, day_of_week, start_time, end_time)
+SELECT c.club_id, l.location_id,
+       'Friday', '17:00:00', '18:00:00'
+FROM Club c
+JOIN Location l ON c.university_id = l.university_id
+WHERE c.name = 'Entrepreneurship Forum'
+    AND c.university_id = 110635
+    AND l.building = 'Student Center'
+    AND l.room = '310';
+
+-- Astronomy and Space Society
+INSERT INTO Meeting
+    (club_id, location_id, day_of_week, start_time, end_time)
+SELECT c.club_id, l.location_id,
+       'Friday', '18:00:00', '19:00:00'
+FROM Club c
+JOIN Location l ON c.university_id = l.university_id
+WHERE c.name = 'Astronomy and Space Society'
+    AND c.university_id = 110635
+    AND l.building = 'Science Hall'
+    AND l.room = '205';
+
+
+-- Melanie: Sample Fresno State meetings
+
+-- Central Valley Robotics Club
+INSERT INTO Meeting
+    (club_id, location_id, day_of_week, start_time, end_time)
+SELECT c.club_id, l.location_id,
+       'Monday', '15:00:00', '16:00:00'
+FROM Club c
+JOIN Location l ON c.university_id = l.university_id
+WHERE c.name = 'Central Valley Robotics Club'
+    AND c.university_id = 110556
+    AND l.building = 'Engineering Building'
+    AND l.room = '102';
+
+-- Computer Science Club
+INSERT INTO Meeting
+    (club_id, location_id, day_of_week, start_time, end_time)
+SELECT c.club_id, l.location_id,
+       'Tuesday', '14:00:00', '15:00:00'
+FROM Club c
+JOIN Location l ON c.university_id = l.university_id
+WHERE c.name = 'Computer Science Club'
+    AND c.university_id = 110556
+    AND l.building = 'Science Hall'
+    AND l.room = '210';
+
+-- Fresno Gaming Association
+INSERT INTO Meeting
+    (club_id, location_id, day_of_week, start_time, end_time)
+SELECT c.club_id, l.location_id,
+       'Wednesday', '17:00:00', '18:00:00'
+FROM Club c
+JOIN Location l ON c.university_id = l.university_id
+WHERE c.name = 'Fresno Gaming Association'
+    AND c.university_id = 110556
+    AND l.building = 'Student Center'
+    AND l.room = '305';
+
+-- Student Entrepreneurs Network
+INSERT INTO Meeting
+    (club_id, location_id, day_of_week, start_time, end_time)
+SELECT c.club_id, l.location_id,
+       'Thursday', '16:00:00', '17:00:00'
+FROM Club c
+JOIN Location l ON c.university_id = l.university_id
+WHERE c.name = 'Student Entrepreneurs Network'
+    AND c.university_id = 110556
+    AND l.building = 'Library'
+    AND l.room = '115';
+
+-- Cultural Exchange Society
+INSERT INTO Meeting
+    (club_id, location_id, day_of_week, start_time, end_time)
+SELECT c.club_id, l.location_id,
+       'Friday', '13:00:00', '14:00:00'
+FROM Club c
+JOIN Location l ON c.university_id = l.university_id
+WHERE c.name = 'Cultural Exchange Society'
+    AND c.university_id = 110556
+    AND l.building = 'Student Center'
+    AND l.room = '305';
+
+-- Wildlife Conservation Club
+INSERT INTO Meeting
+    (club_id, location_id, day_of_week, start_time, end_time)
+SELECT c.club_id, l.location_id,
+       'Friday', '15:00:00', '16:00:00'
+FROM Club c
+JOIN Location l ON c.university_id = l.university_id
+WHERE c.name = 'Wildlife Conservation Club'
+    AND c.university_id = 110556
+    AND l.building = 'Science Hall'
+    AND l.room = '210';
+
