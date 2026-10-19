@@ -96,7 +96,7 @@ CREATE TABLE Club_Manager (
       REFERENCES Manager(manager_id)
 );
 
-CREATE TABLE Club_link (
+CREATE TABLE Club_Link (
   link_id                      PRIMARY KEY AUTO_INCREMENT,
   club_id                      INT NOT NULL,
   link_type                    VARCHAR(20) NOT NULL,
